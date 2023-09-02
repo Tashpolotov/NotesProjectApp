@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/homeFragment"
+    >
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="com.example.notesprojectapp.fragments.homefragment.HomeFragment"
+        android:label="fragment_home"
+        tools:layout="@layout/fragment_home"
+      >
+        <action
+            android:id="@+id/action_homeFragment_to_settingFragment"
+            app:destination="@id/settingFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_creatNewFragment"
+            app:destination="@id/createNewFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_createNewFragment"
+            app:destination="@id/createNewFragment" />
+
+
+    </fragment>
+    <fragment
+        android:id="@+id/settingFragment"
+        android:name="com.example.notesprojectapp.fragments.settingfragment.SettingFragment"
+        android:label="fragment_setting"
+        tools:layout="@layout/fragment_setting" />
+    <fragment
+        android:id="@+id/createNewFragment"
+        android:name="com.example.notesprojectapp.fragments.creatnewframent.CreateNewFragment"
+        android:label="fragment_creat_new"
+        tools:layout="@layout/fragment_create_new" >
+        <action
+            android:id="@+id/action_createNewFragment_to_templateFragment"
+            app:destination="@id/templateFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/templateFragment"
+        android:name="com.example.notesprojectapp.template.TemplateFragment"
+        android:label="fragment_template"
+        tools:layout="@layout/fragment_template" />
+</navigation>
